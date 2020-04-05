@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{2c7e3dd8-3331-4d75-b37b-7028618e6450}</ItemsProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="$(MSBuildThisFileDirectory)readme.txt" />
+    <Text Include="$(MSBuildThisFileDirectory)library.properties" />
+    <Text Include="$(MSBuildThisFileDirectory)src\sys80b_board.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- <ClInclude Include="$(MSBuildThisFileDirectory)sys80b_board.h" /> -->
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Board_Sys80b.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Led8x8.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\msg.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\nvData.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\PIO.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Board_Sys80b.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Led8x8.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\msg.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\nvData.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\PIO.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\sys80b_board.cpp" />
+  </ItemGroup>
+</Project>
